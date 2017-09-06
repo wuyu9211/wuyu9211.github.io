@@ -1,0 +1,584 @@
+/*css 初始化 */
+html,
+ body, 
+ ul, 
+ li,
+ ol,
+ dl,
+ dd, 
+ dt, 
+ p, 
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ form,
+ fieldset,
+ legend,
+ img,
+ input {
+    margin: 0;
+    padding: 0;  /*清除元素的内外边距*/
+}
+
+fieldset, img, input, button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;  /*外面环绕线*/
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/*去掉原样式中的小黑点*/
+
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+
+
+table {
+    border-collapse: collapse; /*合并外连线*/
+}
+
+
+body {
+    font: 12px/150% "microsoft yahei"; 
+    background-color: #F0F0F0; 
+   /* background: #F6F6F6;*/
+}
+
+.clearfix:after {
+	content: "";
+    display: table;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+
+a {
+    color: #666;   /*a 标签是不继承颜色 的*/
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+s,
+i,
+em { 
+    font-style: normal;  
+    text-decoration: none; 
+}
+.w {
+    /*版心 提取 */
+    width: 1191px;
+    margin: 0 auto;
+}
+
+/*开头部分文字开始*/
+.header {
+    height: 28px;
+    background-color: #F7F7F7;
+}
+.header .l {
+    float: left;
+    line-height: 28px;
+}
+.header .l .xianxia {
+    font-size: 13px;
+    color: #000;
+}
+.header .r {
+    float: right;
+    line-height: 28px;
+}
+
+/* <!-- 开头部分文字结束*/
+
+/*logo广告部分开始*/
+.Banner {
+    height: 75px;
+    background-color: #fff;
+}
+.logo {
+    float: left;
+   line-height: 75px;
+}
+.Banner-right {
+    float: right;
+    font-size: 14px;
+}
+.Banner-right li {
+    float: left;
+    line-height: 75px;
+    margin-left: 10px;
+}
+/*logo广告部分结束*/
+
+/*导航栏开始*/
+.nav {
+    height: 38px;
+    background-color: #fff;
+}
+.nav-l {
+    float: left;
+    width: 230px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 18px;
+    line-height: 38px;
+    background-color: #4BAA47;
+    border-radius: 6px 6px 0 0;
+    text-align: center;
+}
+.nav-l a {
+    color: #fff;
+}
+.nav-center {
+    float: left;
+    margin-left: 30px;
+}
+.nav-center li {
+    float: left;
+    line-height: 38px;
+    margin-right: 36px;
+}
+.nav-center li:last-child {
+    margin-right: 0px;
+}
+.nav-center li a {
+    font-size: 16px;
+    color: #000;
+}
+.nav-r {
+    float: right;
+    width: 211px;
+    height: 36px;
+    line-height: 37px;
+    border: 1px #ccc solid;
+    border-radius: 18px;
+    background-color: #fff;
+}
+.nav-r button {
+    background-color: transparent;
+}
+/*导航栏结束*/
+
+/*大背景开始*/
+.Bigbg {
+    width: 100%;
+    height: 320px;
+    background: url("./img/ztbj.jpg") no-repeat center 0;
+    position: relative;
+    background-color: #FF6A6A;
+}
+/*大背景结束*/
+
+/*导航清单开始*/
+.main {
+    height: 100px; 
+    /*position: relative;*/
+}
+.main .main-left {
+    width: 230px;
+    height: 430px;
+    background-color: #662B2B;
+    position: absolute;
+    top: 0;
+    border-radius: 0 0 10px 10px;
+}
+.main .main-left ul {
+   padding-top: 12px;
+  
+}
+.main .main-left li {
+    line-height: 40px;
+    padding-left: 35px;
+
+}
+.main .main-left li:hover {
+    background-color: rgba(255,255,255,.3);
+}
+.main .main-left li a {
+    color: #fff;
+}
+.main .main-left span {
+    float: right;
+    margin-right: 53px;
+}
+.main .main-right {
+    width: 951px;
+    height: 100px;
+   /* background-color: red;*/
+    position: absolute;
+    top: 330px;
+    margin-left: 240px;
+}
+.main .main-right ul li {
+    float: left;
+    width: 230px;
+    height: 100px;
+    margin-right: 10px;
+    background-color: yellow;
+    position: relative;
+}
+.main .main-right ul li:last-child {
+    margin-right: 0;
+}
+.main .main-right img {
+    margin-left: 20px;
+    margin-top: 16px;
+}
+.main .main-right .one {
+    position: absolute;
+    top: 21px;
+    left: 84px;
+}
+.main .main-right .two {
+    position: absolute;
+    top: 50px;
+    left: 84px;
+}
+/*导航清单结束*/
+
+/*课程推荐开始*/
+.recomment {
+    width: 1191px;
+    height: 318px;
+    /*background-color: yellow;*/
+    margin-top: 130px;
+}
+.reconm-left {
+    float: left;
+    width: 690px;
+    height: 318px;  
+    background-color:#fff;
+    position: relative;
+}
+.reconm-left  p {
+    position: absolute;
+    top: 34px;
+    left: 51px;
+}
+.reconm-left .left-box {
+    width: 285px;
+    height: 235px;
+    background-color: yellow;
+    position: absolute;
+    top: 62px;
+    left: 51px;
+    border-radius: 10px;
+}
+.reconm-left .left-box img {
+    width: 285px;
+    height: 161px;
+    border-radius: 10px;
+}
+.reconm-left .right-box {
+    width: 285px;
+    height: 235px;
+    background-color: yellow;
+    position: absolute;
+    top: 62px;
+    left: 356px;
+    border-radius: 10px;
+}
+.reconm-left .right-box img {
+    width: 285px;
+    height: 161px;
+    border-radius: 10px;
+}
+
+.reconm-right {
+    float: right;
+    width: 492px;
+    height: 318px;
+    background-color: #fff;
+    position: relative;
+}
+.reconm-right .right-top {
+    width: 489px;
+    height: 66px;
+    /*background-color: red;*/
+}
+.reconm-right .right-top span {
+    display: inline-block;
+    margin-top: 32px;
+    margin-left: 50px;
+    margin-right: 74px;
+    font-size: 18px;
+}
+.reconm-right .right-top span:last-child {
+    margin-left: 0px;
+    border-bottom: 2px #4BAA47 solid;
+}
+.reconm-right .right-bottom {
+    width: 492px;
+    height: 251px;
+   /* background-color: green;*/
+}
+.reconm-right .right-bottom .bm-l {
+    float: left;
+    width: 208px;
+    height: 251px;
+    background-color: #fff;
+    position: relative;
+}
+.reconm-right .right-bottom .bm-l img {
+    position: absolute;
+    top: 22px;
+    left: 51px;
+}
+.reconm-right .right-bottom .bm-r {
+    float: right;
+}
+.reconm-right .right-bottom .bm-r ul li {
+    list-style: outside;
+    line-height: 40px;
+    color: #4BAA47;
+}
+.reconm-right .right-bottom .bm-r li a {
+    font-size: 12px;
+    color: #000;
+}
+/*课程推荐结束*/
+
+/*一个就业班的标题开始*/
+.pres {
+    line-height: 60px;
+}
+
+
+/*一个就业班的标题结束*/
+
+/*就业班板块开始*/
+.plate {
+    width: 1191px;
+    height: 250px;
+    /*background-color: red;*/
+}
+.plate .jiuye {
+    font-size: 18px;
+}
+.plate-left {
+    float: left;
+    width: 591px;
+    height: 250px;
+    /*background: #ccc;*/
+}
+.plate-left .left-top {
+    width: 591px;
+    height: 120px;
+    /*background-color: yellow;*/
+    position: relative;
+}
+.plate-left .left-top .web {
+    display: inline-block;
+    position: absolute;
+    top: 71px;
+    left: 195px;
+    font-size: 20px;
+    color: #fff;
+}
+.plate-left .left-bl{
+    float: left;
+    width: 290px;
+    height: 120px;
+    /*background-color: pink;*/
+    margin-top: 10px;
+    position: relative;
+}
+.plate-left .left-bl .yun {
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 72px;
+    left: 27px;
+}
+.plate-left .left-br {
+    float: right;
+    width: 290px;
+    height: 120px;
+    /*background-color: red;*/
+    margin-top: 10px;
+    position: relative;
+}
+.plate-left .left-br .python {
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 72px;
+    left: 27px;
+}
+.plate-right {
+    float: right;
+    width: 589px;
+    height: 250px;
+    /*background-color: green;*/
+    position: relative;
+}
+.plate-right .left-bl {
+    float: left;
+    width: 290px;
+    height: 120px;
+    /*background-color: pink;*/
+    position: relative;
+}
+.plate-right .left-bl .quan {
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 46px;
+}
+.plate-right .left-br {
+    float: right;
+    width: 290px;
+    height: 120px;
+    /*background-color: yellow;*/
+    position: relative;
+}
+.plate-right .left-br .anzhuo {
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 46px;
+}
+.plate-right .left-bottom {
+    width: 590px;
+    height: 120px;
+     margin-top: 10px;
+    /*background-color: #000;*/
+    position: absolute;
+    bottom: 0px;
+}
+.plate-right .left-bottom .java {
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 205px;
+}
+/*就业班板块结束*/
+
+/*底部footer开始*/
+.footer {
+    width: 100%;
+    height: 180px;
+    background-color: #2C333F;
+    margin-top: 10px;
+    border-bottom: 1px #fff solid;
+}
+.footer-l {
+    float: left;
+    width: 422px;
+    height: 180px;
+    color: #fff;
+}
+.footer-l p {
+    font-size: 20px;
+    line-height: 60px;
+    padding-top: 11px;
+}
+.footer-l span {
+    font-size: 14px;
+    line-height: 22px;
+}
+.footer-center {
+    float: left;
+    width: 122px;
+    height: 180px;
+    font-size: 20px;
+    margin-left: 60px;
+    position: relative;
+}
+.footer-center p {
+    line-height: 60px;
+    padding: 11px;
+    color: #fff;
+}
+.footer-center .weixin {
+   position: absolute;
+   top: 82px;
+   left: 72px;
+}
+.footer-r {
+    float: right;
+    width: 475px;
+    height: 180px;
+}
+.footer-r li {
+    float:left;
+    margin-right: 38px;
+}
+.footer-r p {
+    font-size: 20px;
+    color: #fff;
+    line-height: 60px;
+    padding-top: 11px;
+}
+.footer-r li a {
+    font-size: 14px;
+    line-height: 27px;
+    color: #fff;
+}
+.footer-rencai {
+    width: 
+}
+.rencai {
+    width: 100%;
+    height: 55px;
+    background-color: #2C333F;
+}
+.rencai .w {
+    position: relative;
+    left: 460px;
+}
+.rencai ul {
+    position: absolute;
+}
+.rencai ul li {
+    float: left;
+    line-height: 55px;
+}
+.rencai ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+.last {
+    background-color: #2C333F;
+    text-align: center;
+    color: #fff;
+}
+.last img {
+    vertical-align: bottom;
+}
+/*底部footer结束*/
+
+
+
+
+
+
+
