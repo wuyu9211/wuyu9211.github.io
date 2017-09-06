@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    ul{
+        list-style: none;
+        width: 200px;
+        height: 200px;
+    }
+    li {
+        float: left;
+        width: 20px;
+        height: 20px;
+        background-color: #000000;
+    }
+</style>
+
+<body>
+<div id="div">
+    <ul id="ul">
+
+    </ul>
+</div>
+
+<button> 上上</button>
+<br/>
+<button>左左</button>
+<button>下下</button>
+<button>右右</button>
+<button>暂停</button>
+<button>加速</button>
+<button>减速</button>
+<script>
+
+    var ul = document.getElementById("ul");
+    for(var n = 0;n<100;n++){
+        ul.appendChild(document.createElement("li"));
+    }
+
+    var lis = ul.children;
+    var btn =document.getElementsByTagName("button");
+
+    var i = 62;
+    var j = 0;
+    var wz = [62,63,64];
+    var sjwz = 0;
+    var sj =500;
+    var jsqid = null;
+    var flag = 0;
+
+
+
+    for(var k = 62;k<=64;k++){
+        lis[k] = k;
+        lis[k].style.backgroundColor = "hotPink";
+    }
+    btn[0].style.marginLeft = (btn[0].offsetWidth+4)+"px";
+    btn[0].style.marginBottom = 4+"px";
+    btn[0].onclick =function(){
+        if(j!=10){j=-10;flag = j;}
+    }
+    btn[1].onclick =function(){
+        if(j!=1){j=-1;flag = j;}
+    }
+    btn[2].onclick =function(){
+        if(j!=-10){j=10;flag = j;}
+    }
+    btn[3].onclick =function(){
+        if(j!=-1){j=1;flag = j;}
+    }
+    btn[4].onclick =function(){
+        if(j!=0) {btn[4].innerHTML = "开始";j=0;}
+        else {btn[4].innerHTML = "暂停";j = flag;}
+    }
+    btn[5].onclick =function(){
+        clearInterval(jsqid)
+        she(sj-=100);
+        console.log("现在速度是："+sj);
+    }
+    btn[6].onclick =function(){
+        clearInterval(jsqid)
+        she(sj+=100);
+        console.log("现在速度是："+sj);
+    }
+
+    lis[Math.floor(Math.random()*100)].style.backgroundColor = "hotPink";
+
+she(sj);
+    function she(sj){
+        jsqid = setInterval(function(){
+
+            if(j!=0){
+                i+=j;
+                wz.unshift(i);
+
+                //判断上下边界
+                if(i<0||i>99){
+                    i=wz[1];
+                    clearInterval(jsqid);
+                }
+                //判断左右边界
+                for(var left=0;left<lis.length;left+=10){
+                    for(var right=9;right<lis.length;right+=10){
+                        if((wz[0]==right&&wz[1]==left)||(wz[0]==left&&wz[1]==right)){
+                            i=wz[1];
+                            clearInterval(jsqid);
+                        }
+                    }
+                }
+
+                if("rgb(255, 105, 180)"==getComputedStyle(lis[i],null)['backgroundColor']){
+
+                    sjwz = Math.floor(Math.random()*100);
+
+                    for(var y= 0;y<wz.length;y++){
+                        if(i == wz[y+1]){
+                            sjwz = i;
+                            ul.style.opacity = 0.5;
+                            console.log("震惊！！这也能吃啊");
+                            clearInterval(jsqid);
+                            break;
+                        }
+                        if(sjwz==wz[y]){
+                            y = -1;
+                            sjwz = Math.floor(Math.random()*100);
+                        }
+                    }
+                    lis[sjwz].style.backgroundColor = "hotPink";
+                }
+
+                else {
+                    lis[wz.pop()].style.backgroundColor = "#000";
+                    console.log(wz);
+                }
+
+                lis[i].style.backgroundColor = "hotPink";
+            }
+        },sj);
+    }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
